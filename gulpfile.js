@@ -19,6 +19,12 @@ gulp.task('styles', function(){
 
 gulp.task('watch', function(){
 
+  browserSync.init({
+    server: {
+      baseDir: "app"
+    }
+  });
+
   watch('./app/assets/styles/**/*.css', function(){
     gulp.start('styles');
   })
