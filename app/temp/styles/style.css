@@ -1,13 +1,15 @@
-body{
-  color: #2f5572;
-  padding: 10px;
-  margin: 1px;
-  -webkit-columns: 300px 2;
-          columns: 300px 2;
-  border: 1px;
+.large-hero{
+  position: relative;
 }
 
-.box a{
-    display: block;
-    padding: 10px;
-  }
+
+body{
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+}
+
+
+img{
+  width: 100%;
+  height: auto;
+}
