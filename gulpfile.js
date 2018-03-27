@@ -1,5 +1,5 @@
-var gulp = require('gulp');
-var watch = require('gulp-watch'),
+var gulp = require('gulp'),
+watch = require('gulp-watch'),
 postcss = require('gulp-postcss'),
 autoprefixer = require('autoprefixer'),
 cssVars = require('postcss-simple-vars'),
@@ -20,15 +20,21 @@ gulp.task('styles', function(){
 gulp.task('watch', function(){
 
   browserSync.init({
+    notify: false,
     server: {
       baseDir: "app"
     }
   });
   watch('./app/index.html', function(){
-    browserSync.reload( );
+    browserSync.reload();
   })
 
   watch('./app/assets/styles/**/*.css', function(){
-    gulp.start('styles');
+    gulp.start('insertCss');
   })
+})
+
+gulp.task('insertCss', ['styles'], function() {
+  return gulp.src('./app/temp/styles/style.css')
+  .pipe(browserSync.stream());
 })
