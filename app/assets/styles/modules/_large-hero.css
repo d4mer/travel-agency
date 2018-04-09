@@ -2,6 +2,10 @@
   border-bottom: 10px solid $mainBlue;
   position: relative;
 
+  &__image{
+    display: block;
+  }
+
   &__text-content{
     position: absolute;
     top: 50%;
