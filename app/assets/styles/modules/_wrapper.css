@@ -4,4 +4,15 @@
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+
+  &--medium{
+    max-width: 976px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+    /* this is used to unwrap the nested wrapper for the image under middle section */
+  .wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
