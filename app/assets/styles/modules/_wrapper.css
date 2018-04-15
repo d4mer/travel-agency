@@ -2,7 +2,8 @@
   padding-left: 18px;
   padding-right: 18px;
   overflow: hidden;
-  max-width: 1200px;
+  /* added 36px to max-width to take into account the 18px padding on left and right above */
+  max-width: 1236px;
   margin-left: auto;
   margin-right: auto;
 
@@ -10,6 +11,16 @@
     max-width: 976px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  &--bottom-margin{
+
+    margin-bottom: 1rem;
+
+    @mixin atSmall {
+      margin-bottom: 3.875rem;
+    }
+
   }
     /* this is used to unwrap the nested wrapper for the image under middle section */
   .wrapper {
