@@ -15,3 +15,12 @@
     @mixin-content;
   }
 }
+
+@define-mixin clearfix {
+  /* this creates empty space after the row and columns so that it doesn'tnover lap underneath */
+    &::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+}
