@@ -460,6 +460,15 @@ img{
   height: auto;
 }
 
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  color: #d59541;
+}
+
 .large-hero{
   border-bottom: 10px solid #2f5572;
   position: relative;
@@ -541,7 +550,9 @@ img{
 .wrapper{
   padding-left: 18px;
   padding-right: 18px;
-  max-width: 1200px;
+  overflow: hidden;
+  /* added 36px to max-width to take into account the 18px padding on left and right above */
+  max-width: 1236px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -550,6 +561,20 @@ img{
     max-width: 976px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+.wrapper--bottom-margin{
+
+    margin-bottom: 1rem;
+
+  }
+
+@media(min-width: 530px){
+
+.wrapper--bottom-margin{
+      margin-bottom: 3.875rem
+
+  }
   }
 
 /* this is used to unwrap the nested wrapper for the image under middle section */
@@ -617,6 +642,10 @@ img{
  }
   }
 
+.headline--no-top-margin {
+     margin-top: 0;
+   }
+
 .headline--centered{
      text-align: center;
    }
@@ -654,6 +683,70 @@ img{
      margin-bottom: 1.6em;
    }
 
-.row{
-  
-}
+/* this creates empty space after the row and columns so that it doesn'tnover lap underneath */
+
+.row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+/* this conteracts the padding on the last column of the rox see _wrapper overflow*/
+
+.row--gutters {
+    margin-right: -65px;
+  }
+
+/* this creates empty space after the row and columns so that it doesn'tnover lap underneath */
+
+.row--gutters > div {
+    padding-right: 65px;
+  }
+
+.row__row__b-margin-until-medium {
+    margin-bottom: 1rem;
+  }
+
+/* Here we have told the browser to disply the row and columns side by side when it is a screen size of 800px which is atMedium */
+
+@media(min-width: 800px){
+
+
+    .row__row__b-margin-until-medium {
+      margin-bottom: 0;
+    }
+     
+    .row__medium-4 {
+      float: left;
+      width: 33.33%;
+    }
+
+    .row__medium-4--larger{
+      width: 37%;
+    }
+
+    .row__medium-8 {
+      float: left;
+      width: 66.66%;
+    }
+
+    .row__medium-8--smaller{
+      width: 63%;
+    }
+  }
+
+.generic-content-container p {
+    line-height: 1.65;
+    margin: 1.8rem 0;
+  }
+
+@media(min-width: 530px){
+
+.generic-content-container p {
+    font-size: 1.125rem
+  }
+  }
+
+.generic-content-container p a {
+      font-weight: 700;
+  }
