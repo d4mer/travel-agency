@@ -629,6 +629,12 @@ a {
      color: #fff;
    }
 
+.page-section--testimonials {
+     background: url('/assets/images/testimonials-bg.jpg') top  no-repeat;
+     background-size: cover;
+
+   }
+
 .headline{
    font-weight: 300;
    font-size: 1.9rem;
@@ -782,7 +788,12 @@ a {
     font-weight: 500;
   }
 
+.section-title--blue {
+    color: #2f5572;
+  }
+
 .section-title__icon {
+
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -792,10 +803,12 @@ a {
 @media(min-width: 530px){
 
 .section-title__icon {
+      top: 13px;
+      position: relative;
       margin-right: .5rem;
       margin-left: 0;
-      display: inline-block;
-      margin-bottom: 0
+      margin-bottom: 0;
+      display: inline-block
   }
   }
 
