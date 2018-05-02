@@ -523,7 +523,7 @@ a {
   }
   }
 
-@media(min-width: 1200px){
+@media(min-width: 1010px){
 
 .large-hero__subtitle{
       font-size: 4.8rem
@@ -563,17 +563,41 @@ a {
     margin-right: auto;
   }
 
+.wrapper--no-padding-until-medium {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+@media(min-width: 800px){
+
+.wrapper--no-padding-until-medium {
+      padding-left: 18px;
+      padding-right: 18px
+  }
+  }
+
+.wrapper--no-padding-until-large {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+@media(min-width: 1010px){
+
+.wrapper--no-padding-until-large {
+      padding-left: 18px;
+      padding-right: 18px
+  }
+  }
+
 .wrapper--bottom-margin{
 
     margin-bottom: 1rem;
-
   }
 
 @media(min-width: 530px){
 
 .wrapper--bottom-margin{
       margin-bottom: 3.875rem
-
   }
   }
 
@@ -630,10 +654,40 @@ a {
    }
 
 .page-section--testimonials {
-     background: url('/assets/images/testimonials-bg.jpg') top  no-repeat;
-     background-size: cover;
+     background-color: #e0e6ef;
 
    }
+
+@media(min-width: 1010px){
+
+.page-section--testimonials {
+       background: url('/assets/images/testimonials-bg.jpg') top  no-repeat;
+       background-size: cover
+
+   }
+  }
+
+.page-section--no-b-padding-until-medium {
+     padding-bottom: 0;
+   }
+
+@media(min-width: 800px){
+
+.page-section--no-b-padding-until-medium {
+       padding: 4.5rem
+   }
+  }
+
+.page-section--no-b-padding-until-large {
+     padding-bottom: 0;
+   }
+
+@media(min-width: 1010px){
+
+.page-section--no-b-padding-until-large {
+       padding: 4.5rem
+   }
+  }
 
 .headline{
    font-weight: 300;
@@ -709,6 +763,14 @@ a {
     padding-right: 65px;
   }
 
+.row--gutters-small {
+    margin-right: -45px;
+  }
+
+.row--gutters-small > div {
+    padding-right: 45px;
+  }
+
 .row--gutters-large {
     margin-right: -100px;
   }
@@ -721,10 +783,13 @@ a {
     margin-bottom: 1rem;
   }
 
+.row--top-padding {
+    padding-top: 80px;
+  }
+
 /* Here we have told the browser to disply the row and columns side by side when it is a screen size of 800px which is atMedium */
 
 @media(min-width: 800px){
-
 
     .row__row__b-margin-until-medium {
       margin-bottom: 0;
@@ -753,6 +818,70 @@ a {
       width: 63%;
     }
   }
+
+@media(min-width: 1010px){
+
+    .row__row__b-margin-until-large {
+      margin-bottom: 0;
+    }
+
+    .row__large-4 {
+      float: left;
+      width: 33.33%;
+    }
+
+    .row__large-4--larger{
+      width: 37%;
+    }
+
+    .row__large-6 {
+      float: left;
+      width: 50%;
+    }
+
+    .row__large-8 {
+      float: left;
+      width: 66.66%;
+    }
+
+    .row__large-8--smaller{
+      width: 63%;
+    }
+  }
+
+/*Begin equal height rules to make the white background the same height*/
+
+@media(min-width: 800px){
+
+.row--equal-h-atmedium {
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: flex
+ }
+  }
+
+.row--equal-h-atmedium > div {
+      float: none;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
+
+@media(min-width: 1010px){
+
+.row--equal-h-atlarge {
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: flex
+ }
+  }
+
+.row--equal-h-atlarge > div {
+      float: none;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
 
 .generic-content-container p {
     font-weight: 300;
@@ -852,4 +981,49 @@ a {
       text-align: left;
       font-size: 1.875rem
   }
+  }
+
+.testimonial {
+  background-color: rgba(255, 255, 255, .8);
+  padding: 0 18px 1px 18px ;
+  margin-bottom: 98px;
+}
+
+@media(min-width: 1010px){
+
+.testimonial {
+    margin-bottom: 0;
+    padding: 0 1.8125rem 1px 1.8125rem 
+}
+  }
+
+.testimonial__photo {
+    border-radius: 80px;
+    overflow: hidden;
+    width: 160px;
+    height: 160px;
+    margin: 0 auto -80px auto;
+    position: relative;
+    top: -80px;
+    border: 6px solid rgba(255, 255, 255, .8);
+  }
+
+.testimonial__title {
+    color: #2f5572;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0;
+  }
+
+.testimonial__subtitle {
+    color: #d59541;
+    text-align: center;
+    font-weight: 400;
+    font-size: 0.9375rem;
+    margin: .25rem 0 1rem 0;
+  }
+
+.testimonial--last {
+    margin-bottom: 0;
   }
